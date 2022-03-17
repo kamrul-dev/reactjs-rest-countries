@@ -4,7 +4,7 @@ import Country from '../Country/Country';
 // create countries component and load the data
 const Countries = () => {
     const [countries, setCountries] = useState([]);
-    console.log(countries);
+    // console.log(countries);
     useEffect(() => {
         fetch('https://restcountries.com/v3.1/all')
             .then(res => res.json())
