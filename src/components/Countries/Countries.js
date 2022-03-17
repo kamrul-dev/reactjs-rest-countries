@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Country from '../Country/Country';
+import './Countries.css';
 
 // create countries component and load the data
 const Countries = () => {
@@ -13,11 +14,14 @@ const Countries = () => {
     return (
         <div>
             <h2>Available Rest Countries: {countries.length}</h2>
-            {
-                countries.map(country => <Country
-                    country={country}
-                ></Country>)
-            }
+            <div className='countries-container'>
+                {
+                    countries.map(country => <Country
+                        country={country}
+                        key={country.cca3}
+                    ></Country>)
+                }
+            </div>
         </div>
     );
 };
